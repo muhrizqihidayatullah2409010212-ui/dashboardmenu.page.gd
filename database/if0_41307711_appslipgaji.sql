@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: sql312.infinityfree.com
--- Generation Time: May 07, 2026 at 01:39 PM
+-- Generation Time: Jun 01, 2026 at 02:35 PM
 -- Server version: 11.4.7-MariaDB
 -- PHP Version: 7.2.22
 
@@ -42,8 +42,6 @@ CREATE TABLE `detail_transaksi` (
 --
 
 INSERT INTO `detail_transaksi` (`id`, `transaksi_id`, `nama_menu`, `harga`, `qty`, `subtotal`) VALUES
-(21, 8, 'kopi-aren', 15000, 1, 15000),
-(22, 8, 'matcha', 18000, 1, 18000);
 
 -- --------------------------------------------------------
 
@@ -66,9 +64,6 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`id`, `email`, `password`, `reset_token`, `token_expire`, `otp_code`, `otp_expire`) VALUES
-(1, '1@1', '$2y$10$Wb5x0OJ.aQqrfYti0Fjefu.DgIjBvGBW5Ohy5u56INEu35haNLWaq', 'b26a6589b0f9111d56dff26d5514f532', '2026-05-01 23:56:28', '404713', '2026-05-05 23:43:24'),
-(6, 'dimas@gmail.com', '$2y$10$z6kINdR6t93K9F6EO4fDfu/66kwKH9Pmpi14nGWlyb6YDfwgmCr1a', NULL, NULL, NULL, NULL),
-(7, 'admin@admin', '$2y$10$feTAP74ly5gIk7mmI8ZgqukZdCVE.J6rkSe9CvFOmF/ZCyzWsZrXS', '08354101486cf7b9e8062a08f8ff94ec', '2026-05-02 00:09:34', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -90,15 +85,6 @@ CREATE TABLE `transaksi` (
 --
 
 INSERT INTO `transaksi` (`id`, `invoice`, `tanggal`, `tipe_pesanan`, `metode_pembayaran`, `total`) VALUES
-(1, 'RZQ-63346', '2026-04-30 12:18:57', 'Ditempat', 'Cash', 15000),
-(2, 'RZQ-23498', '2026-04-30 12:23:53', 'Ditempat', 'Cash', 202000),
-(3, 'RZQ-49513', '2026-04-30 12:44:38', 'Ditempat', 'Cash', 30000),
-(4, 'RZQ-91005', '2026-05-01 20:05:09', 'Ditempat', 'Cash', 55000),
-(5, 'RZQ-68637', '2026-05-01 20:05:20', 'Ditempat', 'QRIS', 8000),
-(6, 'RZQ-90611', '2026-05-04 10:57:28', 'Ditempat', 'Cash', 98000),
-(7, 'RZQ-95067', '2026-05-05 19:52:48', 'Take Away', 'QRIS', 15000),
-(8, 'RZQ-76020', '2026-05-06 09:40:09', 'Take Away', 'Cash', 33000);
-
 --
 -- Indexes for dumped tables
 --
@@ -129,19 +115,19 @@ ALTER TABLE `transaksi`
 -- AUTO_INCREMENT for table `detail_transaksi`
 --
 ALTER TABLE `detail_transaksi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
